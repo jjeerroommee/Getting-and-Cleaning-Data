@@ -66,3 +66,5 @@ dataset_2 <- dataset_1 %>%
     group_by(activity, subject_id) %>%
     summarize(across(everything(), mean))
 
+## Exports the dataset in a text file
+write.table(dataset_2, "dataset_2.txt",  row.names = FALSE)
